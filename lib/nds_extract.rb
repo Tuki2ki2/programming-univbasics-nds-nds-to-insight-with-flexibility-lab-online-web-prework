@@ -38,6 +38,7 @@ a = 0
 new_array = []
 a = movie_with_director_name(name, movie_data)
 
+#have a call tomorrow to discuss this one...
 end
 
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
