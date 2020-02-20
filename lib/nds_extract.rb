@@ -10,9 +10,9 @@ def flatten_a_o_a(aoa)
   result = []
   i = 0
 
-  while i < aoa.length do
+  while i < aoa.length
     k = 0
-    while k < aoa[i].length do
+    while k < aoa[i].length
       result << aoa[i][k]
       k += 1
     end
@@ -34,11 +34,11 @@ end
 
 # Your code after this point
 def movies_with_director_key(name, movies_collection)
-a = 0
-new_array = []
-a = movie_with_director_name(name, movie_data)
+new_hash = {}
+a=0
+directors_movies = movie_with_director_name(director_name, movie_data)
 
-#have a call tomorrow to discuss this one...
+
 end
 
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
@@ -62,7 +62,7 @@ def gross_per_studio(collection)
   i = 0
   new_hash = {}
   gross = 0
-  while i < collection.length do
+  while i < collection.length
     studio_name = collection[i][:studio]
     gross = collection[i][:worldwide_gross]
     if !!new_hash[studio_name]
@@ -74,8 +74,6 @@ def gross_per_studio(collection)
   end
   end
     new_hash
-    #somehow putting out 50 & 60?
-
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
   # return a Hash that includes the total worldwide_gross of all the movies from
   # each studio.
@@ -90,33 +88,22 @@ def gross_per_studio(collection)
 end
 
 def movies_with_directors_set(source)
-
-  def title(source)
-  a=0
-  method_array = []
-  while a < source.length do
-    b = 0
-    while b < source[a][:movies].length do
-      method_array << source[a][:movies][b]
-      b+=1
+    a = 0
+    array = []
+    while a < source.length do
+      array << source[a][:movies]
+      b=0
+      while b < array[a].length
+        array[a][b][:director_name]=source[a][:name]
+        b+=1
+      end
+      a+=1
+    end
+    array
   end
-  a+=1
-end
-method_array
-end
-# gives out the movies titles [{ }]
-
-def director_name(source)
-  director_name = []
-  a = 0
-  while a < source.length do
-    director_name << source[a][:name]
-    a +=1
-  end
-  director_name
-end
 
 # gives out the directors in an array
+
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
   # INPUT:
@@ -128,7 +115,7 @@ end
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
 
-end
+# end
 
 
 # ----------------    End of Your Code Region --------------------
