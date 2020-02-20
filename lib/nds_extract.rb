@@ -34,11 +34,15 @@ end
 
 # Your code after this point
 def movies_with_director_key(name, movies_collection)
-new_hash = {}
-a=0
-directors_movies = movie_with_director_name(director_name, movie_data)
 
-
+a = 0
+movie = movies_collection
+array= []
+while a < movies_collection.length
+   array << movie_with_director_name(name,movie[a])
+   a+=1
+ end
+ array
 end
 
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
@@ -97,7 +101,7 @@ def movies_with_directors_set(source)
         array[a][b][:director_name]=source[a][:name]
         b+=1
         end
-    a+=1
+        a+=1
     end
     array
   end
