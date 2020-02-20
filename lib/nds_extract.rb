@@ -43,7 +43,7 @@ while a < movies_collection.length
    a+=1
  end
  array
-end 
+end
 
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
   # of movies and a directors name to the movie_with_director_name method
