@@ -37,13 +37,13 @@ def movies_with_director_key(name, movies_collection)
 
 a = 0
 movie = movies_collection
-array= []
+array = []
 while a < movies_collection.length
    array << movie_with_director_name(name,movie[a])
    a+=1
  end
  array
-end
+end 
 
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
   # of movies and a directors name to the movie_with_director_name method
